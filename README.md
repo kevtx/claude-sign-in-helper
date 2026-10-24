@@ -139,7 +139,7 @@ Safari keeps its cookies in a protected location. macOS only lets an app read th
 <details>
 <summary><b>Why does macOS ask about "Claude Safe Storage"?</b></summary>
 
-Claude Desktop encrypts its cookies with a key stored in your Keychain under that name. The helper needs it to write your session in Desktop's format. Choose **Allow**. If macOS asks for a password, it's your Mac login password, typed into macOS's own dialog. The helper has no password field.
+Claude Desktop encrypts its cookies with a key stored in your Keychain under that name. The helper needs it to write your session in Desktop's format. Choose **Allow**. macOS may ask twice, with slightly different wording; choose **Allow** both times. If macOS asks for a password, it's your Mac login password, typed into macOS's own dialog. The helper has no password field.
 
 </details>
 
@@ -160,6 +160,12 @@ No. It only copies a sign-in that already works in Safari on the same Mac. A sig
 ## Build from source
 
 You need Apple's Command Line Tools (`xcode-select --install`) or Xcode. There are no packages to install.
+
+With Command Line Tools 27 and its macOS 27 SDK, the build fails with `plugin for module 'SwiftUIMacros' not found`. Build against the macOS 26.5 SDK that ships alongside it instead:
+
+```bash
+SDKROOT=/Library/Developer/CommandLineTools/SDKs/MacOSX26.5.sdk ./build.sh
+```
 
 ```bash
 git clone https://github.com/hibari233/claude-sign-in-helper.git
