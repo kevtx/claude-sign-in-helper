@@ -146,7 +146,7 @@ struct SignInView: View {
         case .ready, .existing: return [Action(title: String(localized: "Check again")) { model.check() }]
         case .imported:
             return [model.claudeOpened ? Action(title: String(localized: "Open Claude")) { model.openClaude() } : Action(title: String(localized: "Verify sign-in")) { model.verify() }]
-        case .unconfirmed: return [Action(title: String(localized: "Open Claude")) { model.openClaude() }, Action(title: String(localized: "Backups")) { model.present(.backups) }]
+        case .unconfirmed: return [Action(title: String(localized: "Open Claude")) { model.openClaude() }]
         default: return []
         }
     }
