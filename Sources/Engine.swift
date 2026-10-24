@@ -203,6 +203,9 @@ final class SessionEngine {
         let original = try CookieDatabase(folder.appendingPathComponent("Cookies"))
         let oldRows = try original.selectedRows()
         let database = try CookieDatabase(paths.database, writable: true)
+        if try database.fingerprint() != saved.manifest.importFingerprint, try !database.hasLogin() {
+            throw HelperFailure(code: "session_removed", title: "Desktop no longer has the imported sign-in", detail: "Claude Desktop removed the imported session, so there’s nothing to undo. Nothing was changed.")
+        }
         try require(try database.fingerprint() == saved.manifest.importFingerprint, "newer_session", "Desktop has a newer sign-in", "Restoring this backup would replace newer session data, so the helper stopped. Your current sign-in is unchanged.")
         let checkpoint = try makeBackup(database, action: "restore-checkpoint")
         try database.query("BEGIN EXCLUSIVE")

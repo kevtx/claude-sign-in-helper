@@ -19,7 +19,7 @@
 "Once Claude Desktop has loaded, check that it reported a successful sign-in." = "Once Claude Desktop has loaded, check that it reported a successful sign-in.";
 "Open Claude Desktop so it can finish signing in, then confirm it here." = "Open Claude Desktop so it can finish signing in, then confirm it here.";
 "Claude Desktop reported a successful sign-in. Check that it shows the account you expect." = "Claude Desktop reported a successful sign-in. Check that it shows the account you expect.";
-"Claude may still be loading, or it may ask you to sign in again. If needed, you can undo the import in Backups." = "Claude may still be loading, or it may ask you to sign in again. If needed, you can undo the import in Backups.";
+"Claude may still be loading. If it asks you to sign in, sign out of Claude in Safari and back in, then import again." = "Claude may still be loading. If it asks you to sign in, sign out of Claude in Safari and back in, then import again.";
 "Checking only reads. Nothing leaves this Mac." = "Checking only reads. Nothing leaves this Mac.";
 "Step %lld of 4" = "Step %lld of 4";
 
@@ -215,6 +215,8 @@
 "Choose an import that has not already been undone." = "Choose an import that has not already been undone.";
 "Desktop has a newer sign-in" = "Desktop has a newer sign-in";
 "Restoring this backup would replace newer session data, so the helper stopped. Your current sign-in is unchanged." = "Restoring this backup would replace newer session data, so the helper stopped. Your current sign-in is unchanged.";
+"Desktop no longer has the imported sign-in" = "Desktop no longer has the imported sign-in";
+"Claude Desktop removed the imported session, so there’s nothing to undo. Nothing was changed." = "Claude Desktop removed the imported session, so there’s nothing to undo. Nothing was changed.";
 "The session changed during restore" = "The session changed during restore";
 "Nothing will be replaced." = "Nothing will be replaced.";
 "There is no import to verify yet" = "There is no import to verify yet";

@@ -19,7 +19,7 @@
 "Once Claude Desktop has loaded, check that it reported a successful sign-in." = "等 Claude Desktop 加载完成后，检查它是否报告登录成功。";
 "Open Claude Desktop so it can finish signing in, then confirm it here." = "打开 Claude Desktop 以完成登录，然后回到这里确认。";
 "Claude Desktop reported a successful sign-in. Check that it shows the account you expect." = "Claude Desktop 报告登录成功。请检查它显示的是否为你预期的账户。";
-"Claude may still be loading, or it may ask you to sign in again. If needed, you can undo the import in Backups." = "Claude 可能仍在加载，也可能会要求你重新登录。如有需要，可以在“备份”中撤销导入。";
+"Claude may still be loading. If it asks you to sign in, sign out of Claude in Safari and back in, then import again." = "Claude 可能仍在加载。如果它要求你登录，请在 Safari 中退出 Claude 并重新登录，然后再次导入。";
 "Checking only reads. Nothing leaves this Mac." = "检查只会读取数据，不会有任何数据离开这台 Mac。";
 "Step %lld of 4" = "第 %lld 步，共 4 步";
 
@@ -215,6 +215,8 @@
 "Choose an import that has not already been undone." = "请选择尚未撤销的导入。";
 "Desktop has a newer sign-in" = "Desktop 有更新的登录";
 "Restoring this backup would replace newer session data, so the helper stopped. Your current sign-in is unchanged." = "恢复此备份会替换较新的会话数据，因此已停止操作。你当前的登录保持不变。";
+"Desktop no longer has the imported sign-in" = "Desktop 中已没有导入的登录信息";
+"Claude Desktop removed the imported session, so there’s nothing to undo. Nothing was changed." = "Claude Desktop 已删除导入的会话，因此没有可撤销的内容。未做任何更改。";
 "The session changed during restore" = "恢复期间会话发生了变化";
 "Nothing will be replaced." = "不会替换任何内容。";
 "There is no import to verify yet" = "还没有可验证的导入";

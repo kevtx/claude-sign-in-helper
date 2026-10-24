@@ -19,7 +19,7 @@ Requires macOS 13 or later with Apple's Command Line Tools (`xcode-select --inst
 "dist/Claude Sign-In Helper.app/Contents/MacOS/ClaudeSignInHelper" --self-test
 ```
 
-`--self-test` runs 31 isolated tests using fabricated credentials and temporary files. They cover:
+`--self-test` runs 32 isolated tests using fabricated credentials and temporary files. They cover:
 
 - Safari cookie parsing and the cases it must reject
 - AES and PBKDF2 against independent test vectors

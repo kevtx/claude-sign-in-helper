@@ -19,7 +19,7 @@
 "Once Claude Desktop has loaded, check that it reported a successful sign-in." = "Claude Desktopの読み込みが終わったら、サインインに成功したかを確認してください。";
 "Open Claude Desktop so it can finish signing in, then confirm it here." = "Claude Desktopを開いてサインインを完了させ、ここで確認してください。";
 "Claude Desktop reported a successful sign-in. Check that it shows the account you expect." = "Claude Desktopがサインインの成功を報告しました。表示されているアカウントが正しいか確認してください。";
-"Claude may still be loading, or it may ask you to sign in again. If needed, you can undo the import in Backups." = "Claudeがまだ読み込み中か、再度サインインを求めている可能性があります。必要であれば「バックアップ」で取り込みを取り消せます。";
+"Claude may still be loading. If it asks you to sign in, sign out of Claude in Safari and back in, then import again." = "Claudeがまだ読み込み中の可能性があります。サインインを求められた場合は、SafariでClaudeからサインアウトして再度サインインし、もう一度取り込んでください。";
 "Checking only reads. Nothing leaves this Mac." = "読み取りのみで、データはこのMacから出ません。";
 "Step %lld of 4" = "ステップ %lld/4";
 
@@ -215,6 +215,8 @@
 "Choose an import that has not already been undone." = "まだ取り消していない取り込みを選んでください。";
 "Desktop has a newer sign-in" = "Desktopに新しいサインインがあります";
 "Restoring this backup would replace newer session data, so the helper stopped. Your current sign-in is unchanged." = "このバックアップを復元すると新しいセッションデータが置き換わるため、処理を停止しました。現在のサインインは変更されていません。";
+"Desktop no longer has the imported sign-in" = "Desktopに取り込んだサインインがありません";
+"Claude Desktop removed the imported session, so there’s nothing to undo. Nothing was changed." = "Claude Desktopが取り込んだセッションを削除したため、取り消すものはありません。何も変更されていません。";
 "The session changed during restore" = "復元中にセッションが変更されました";
 "Nothing will be replaced." = "何も置き換えません。";
 "There is no import to verify yet" = "確認できる取り込みはまだありません";

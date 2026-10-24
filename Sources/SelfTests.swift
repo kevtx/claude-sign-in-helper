@@ -163,6 +163,14 @@ func runSelfTests() -> Int32 {
         let before = try fixture.rows()
         try expectFailure { try fixture.engine.restore(saved.id, validateApp: false) }; try expect(try fixture.rows() == before)
     }
+    test("Restore explains a removed session") {
+        let fixture = try Fixture(); let saved = try fixture.runImport()
+        try CookieDatabase(fixture.paths.database, writable: true).query("DELETE FROM cookies WHERE name='sessionKey'")
+        let before = try fixture.rows()
+        do { try fixture.engine.restore(saved.id, validateApp: false); try expect(false) }
+        catch let failure as HelperFailure where failure.code != "test_assertion" { try expect(failure.code == "session_removed") }
+        try expect(try fixture.rows() == before)
+    }
     test("Altered backup cannot be restored") {
         let fixture = try Fixture(); let saved = try fixture.runImport()
         let file = fixture.paths.backups.appendingPathComponent(saved.id + "/Cookies")

@@ -89,7 +89,7 @@ It works entirely on your Mac. It doesn't create a new sign-in, it can't recover
 - Writes in one SQLite transaction, verifies the result, and rolls back on any failure.
 - Refuses symbolic links, files owned by another account, unfamiliar database schemas, and ambiguous or expired sessions, and stops without changing anything.
 - Shows only redacted errors: no raw logs or credentials.
-- Covered by 31 self-tests that use only fabricated credentials and temporary files.
+- Covered by 32 self-tests that use only fabricated credentials and temporary files.
 
 </details>
 
@@ -178,7 +178,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the project layout, the preview rende
 
 ## Project status
 
-This is a **preview** (0.3.0). The transfer method has worked on a real Intel Mac, and the native app's import and restore engine is covered by 31 self-tests that use synthetic data. The universal build includes Apple silicon, but that hasn't been independently tested yet, and neither has the native app's interactive Keychain prompt. Reports are very welcome. See [CHANGELOG.md](CHANGELOG.md) for what's new.
+This is a **preview** (0.3.0). The transfer method has worked on a real Intel Mac, and the native app's import and restore engine is covered by 32 self-tests that use synthetic data. The universal build includes Apple silicon, but that hasn't been independently tested yet, and neither has the native app's interactive Keychain prompt. Reports are very welcome. See [CHANGELOG.md](CHANGELOG.md) for what's new.
 
 ## Contributing
 

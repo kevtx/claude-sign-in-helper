@@ -19,7 +19,7 @@
 "Once Claude Desktop has loaded, check that it reported a successful sign-in." = "Une fois Claude Desktop chargé, vérifiez qu’il a signalé une connexion réussie.";
 "Open Claude Desktop so it can finish signing in, then confirm it here." = "Ouvrez Claude Desktop pour terminer la connexion, puis confirmez-la ici.";
 "Claude Desktop reported a successful sign-in. Check that it shows the account you expect." = "Claude Desktop a signalé une connexion réussie. Vérifiez qu’il affiche le bon compte.";
-"Claude may still be loading, or it may ask you to sign in again. If needed, you can undo the import in Backups." = "Claude est peut-être encore en cours de chargement, ou vous demandera de vous reconnecter. Si besoin, vous pouvez annuler l’importation dans Sauvegardes.";
+"Claude may still be loading. If it asks you to sign in, sign out of Claude in Safari and back in, then import again." = "Claude est peut-être encore en cours de chargement. S’il vous demande de vous connecter, déconnectez-vous de Claude dans Safari puis reconnectez-vous, et importez à nouveau.";
 "Checking only reads. Nothing leaves this Mac." = "La vérification ne fait que lire. Rien ne quitte ce Mac.";
 "Step %lld of 4" = "Étape %lld sur 4";
 
@@ -215,6 +215,8 @@
 "Choose an import that has not already been undone." = "Choisissez une importation qui n’a pas déjà été annulée.";
 "Desktop has a newer sign-in" = "Desktop a une connexion plus récente";
 "Restoring this backup would replace newer session data, so the helper stopped. Your current sign-in is unchanged." = "Restaurer cette sauvegarde remplacerait des données de session plus récentes ; l’outil s’est donc arrêté. Votre connexion actuelle est inchangée.";
+"Desktop no longer has the imported sign-in" = "Desktop n’a plus la connexion importée";
+"Claude Desktop removed the imported session, so there’s nothing to undo. Nothing was changed." = "Claude Desktop a supprimé la session importée ; il n’y a donc rien à annuler. Rien n’a été modifié.";
 "The session changed during restore" = "La session a changé pendant la restauration";
 "Nothing will be replaced." = "Rien ne sera remplacé.";
 "There is no import to verify yet" = "Il n’y a encore aucune importation à vérifier";

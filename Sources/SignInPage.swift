@@ -89,7 +89,7 @@ struct SignInView: View {
         case .verified:
             return String(localized: "Claude Desktop reported a successful sign-in. Check that it shows the account you expect.")
         case .unconfirmed:
-            return String(localized: "Claude may still be loading, or it may ask you to sign in again. If needed, you can undo the import in Backups.")
+            return String(localized: "Claude may still be loading. If it asks you to sign in, sign out of Claude in Safari and back in, then import again.")
         }
     }
 

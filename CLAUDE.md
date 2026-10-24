@@ -14,7 +14,7 @@ A small native macOS app (SwiftUI + AppKit, macOS 13+, no dependencies, no Xcode
 # build.sh puts its temp folder under $TMPDIR (falls back to /private/tmp)
 
 BIN="dist/Claude Sign-In Helper.app/Contents/MacOS/ClaudeSignInHelper"
-"$BIN" --self-test             # 31 synthetic-data tests; prints PASS/FAIL per test, nonzero exit on failure
+"$BIN" --self-test             # 32 synthetic-data tests; prints PASS/FAIL per test, nonzero exit on failure
 "$BIN" --check-json            # read-only check of this Mac: status + Desktop version or a redacted error
 "$BIN" --render-preview /tmp/x.png --scene ready --dark --scale 2 -AppleLanguages "(ja)"
 ```
@@ -35,7 +35,7 @@ BIN="dist/Claude Sign-In Helper.app/Contents/MacOS/ClaudeSignInHelper"
 ## Rules from CONTRIBUTING.md
 
 - Never commit or print real sign-in data (cookie values, keys, Keychain passwords, backups, cookie DBs, raw Claude logs). Don't run imports/restores against a real account to test a change; use `--self-test` and the preview renderer.
-- Any change to `Core.swift` or `Engine.swift` needs a matching self-test. Update the "31 self-tests" count in README/CONTRIBUTING if it changes.
+- Any change to `Core.swift` or `Engine.swift` needs a matching self-test. Update the "32 self-tests" count in README/CONTRIBUTING if it changes.
 - Keep the README promises: no network access, nothing read until the user asks, a backup before every change, never overwrite an existing or newer Desktop sign-in.
 - **Translations:** English text is the key in `Resources/<lang>.lproj/Localizable.strings` (en, fr, ja, zh-Hans). Every new UI string *and* every new engine message needs an entry in every language; keep `%@`/`%lld` placeholders. Adding a language also means `CFBundleLocalizations` in `Resources/Info.plist` and `AppLanguage.choices` in `Language.swift`.
 - **Layout limits:** fixed 440 × 480 window; sheets must fit in the 452 pt below the title bar. Check changed screens in light and dark with the preview renderer.
