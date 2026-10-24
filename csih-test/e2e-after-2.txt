@@ -1,0 +1,37 @@
+== after-2 2026-10-23 23:23:25
+== 4b
+{"desktop_version":"3.6556.2","status":"desktop_session_exists"}
+exit=0
+== 4c
+owner=<user> mode=600 size=36864
+key|value
+mmap_status|-1
+version|24
+last_compatible_version|24
+columns
+creation_utc, host_key, top_frame_site_key, name, value, encrypted_value, path, expires_utc, is_secure, is_httponly, last_access_utc, has_expires, is_persistent, priority, samesite, source_scheme, source_port, last_update_utc, source_type, has_cross_site_ancestor
+index_name|unique|index_columns
+cookies_unique_index|1|host_key, top_frame_site_key, has_cross_site_ancestor, name, path, source_scheme, source_port
+journal_mode
+delete
+quick_check
+ok
+host_key|name|enc_prefix|plaintext_empty
+.claude.ai|CH-prefers-color-scheme|v10|1
+.claude.ai|__cf_bm|v10|1
+.claude.ai|__ssid|v10|1
+.claude.ai|__stripe_mid|v10|1
+.claude.ai|_fbp|v10|1
+.claude.ai|_gcl_au|v10|1
+.claude.ai|ajs_anonymous_id|v10|1
+.claude.ai|cf_clearance|v10|1
+.claude.ai|intercom-device-id-lupk8zyo|v10|1
+.claude.ai|lastActiveOrg|v10|1
+.claude.ai|sessionKey|v10|1
+.claude.ai|user-sidebar-visible-on-load|v10|1
+claude.ai|_dd_s_v2|v10|1
+claude.ai|activitySessionId|v10|1
+claude.ai|anthropic-device-id|v10|1
+claude.ai|return-to|v10|1
+== 4d
+main.log marker count: 12

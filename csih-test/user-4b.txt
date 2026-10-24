@@ -1,0 +1,2 @@
+{"desktop_version":"3.6556.2","status":"desktop_session_exists"}
+exit=0

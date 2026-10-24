@@ -1,0 +1,3 @@
+Desktop matches helper's signing requirement
+Identifier=com.anthropic.claudefordesktop
+TeamIdentifier=Q6L2SF6YDW

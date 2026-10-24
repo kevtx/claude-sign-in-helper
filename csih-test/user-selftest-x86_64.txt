@@ -1,0 +1,33 @@
+PASS Safari cookie domain and flags
+PASS Only exact Claude domains and allowed names
+PASS All three permitted cookies
+PASS Expired session rejected
+PASS Expired optional cookie ignored
+PASS Missing protection flags rejected
+PASS Ambiguous session rejected
+PASS Newer session format rejected
+PASS Non-root cookie scope rejected
+PASS Truncated input and invalid offsets rejected
+PASS Nonfinite and enormous expiry rejected
+PASS AES matches independent OpenSSL golden vector
+PASS PBKDF2 matches independent Python golden vector
+PASS Encrypted cookie is bound to its hostname
+PASS Python v1 fingerprint compatibility
+PASS Import encryption and private backup
+PASS Existing Desktop login preserved
+PASS Wrong Keychain key cannot modify cookies
+PASS Write failure rolls back the whole import
+PASS Restore preserves unrelated new cookies
+PASS Restore refuses a newer login
+PASS Altered backup cannot be restored
+PASS Future database schema rejected
+PASS Expired during approval is rejected
+PASS Verification ignores historical sign-in logs
+PASS Symlink database rejected
+PASS Database creation never overwrites an existing file
+PASS Database rejects a symbolic link in its parent path
+PASS Version 1 backup manifest can be restored
+PASS Backup IDs cannot escape the backup folder
+PASS Unexpected errors are redacted
+31 passed; 0 failed. Synthetic fixtures only; no live account access.
+exit=0
