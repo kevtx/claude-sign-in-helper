@@ -20,3 +20,6 @@ _archive/
 Cookies*
 *.binarycookies
 manifest.json
+
+# Local issue tracker (see docs/agents/issue-tracker.md)
+.scratch/
