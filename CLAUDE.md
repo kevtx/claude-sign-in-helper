@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A small native macOS app (SwiftUI + AppKit, macOS 13+, no dependencies, no Xcode project) that copies the Claude `sessionKey`/`lastActiveOrg`/`anthropic-device-id` cookies from Safari's `Cookies.binarycookies` into Claude Desktop's Chromium cookie database (`~/Library/Application Support/Claude/Cookies`), encrypted with the "Claude Safe Storage" Keychain key. See `AGENTS.md` for the issue tracker (`.scratch/`), triage labels, and domain-doc conventions.
+A small native macOS app (SwiftUI + AppKit, macOS 13+, no dependencies, no Xcode project) that copies the Claude `sessionKey`/`lastActiveOrg`/`anthropic-device-id` cookies from Safari's `Cookies.binarycookies` into Claude Desktop's Chromium cookie database (`~/Library/Application Support/Claude/Cookies`), encrypted with the "Claude Safe Storage" Keychain key.
 
 ## Commands
 
@@ -20,6 +20,7 @@ BIN="dist/Claude Sign-In Helper.app/Contents/MacOS/ClaudeSignInHelper"
 ```
 
 - There is no test filter: tests are `test("name") { ... }` closures inside `runSelfTests()` in `Sources/SelfTests.swift`, and `--self-test` runs all of them. To iterate on one, temporarily comment out others or just read its PASS/FAIL line.
+- `csih-test/e2e-snapshot.sh before|after|after-restore` is a manual, read-only probe of the *real* Desktop cookie DB and log (structure and counts only, never values). It expects a build in `csih-test/dist-sdk26.5/` and refuses to overwrite an existing `e2e-<label>.txt`. The real import between snapshots is done by a human, not by you.
 - There is no linter. `build.sh` runs `plutil -lint` on every `Localizable.strings`, so a malformed translation fails the build.
 - `--render-preview` scenes: `welcome`, `quit`, `ready`, `importing`, `existing`, `success`, `opened`, `verified`, `unconfirmed`, `permission`, `backups`, `backups-empty`, `restored`, `help`, `confirm-import`, `confirm-restore`. The output file must not already exist, and rendering needs a logged-in GUI session. Add `-NSShowNonLocalizedStrings YES` to surface missing translations (shown in capitals).
 
