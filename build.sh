@@ -3,7 +3,8 @@
 set -euo pipefail
 task_root="$(cd "$(dirname "$0")" && pwd)"
 task_dist="${1:-$task_root/dist}"
-task_build="$(mktemp -d /private/tmp/claude-native-build.XXXXXX)"
+task_tmp="${TMPDIR:-/private/tmp}"
+task_build="$(mktemp -d "${task_tmp%/}/claude-native-build.XXXXXX")"
 trap 'rm -rf "$task_build"' EXIT
 task_finalapp="$task_dist/Claude Sign-In Helper.app"
 if [[ -e "$task_finalapp" ]]; then

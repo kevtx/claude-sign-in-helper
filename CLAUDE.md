@@ -11,7 +11,7 @@ A small native macOS app (SwiftUI + AppKit, macOS 13+, no dependencies, no Xcode
 ```bash
 ./build.sh                     # universal build -> dist/Claude Sign-In Helper.app (ad hoc signed)
 ./build.sh dist-2              # build.sh refuses to overwrite an existing app; use a fresh folder
-csih-test/build-sandboxed.sh dist-2   # same build, but temp dir under $TMPDIR (build.sh uses /private/tmp, which the Claude Code sandbox can't write)
+# build.sh puts its temp folder under $TMPDIR (falls back to /private/tmp)
 
 BIN="dist/Claude Sign-In Helper.app/Contents/MacOS/ClaudeSignInHelper"
 "$BIN" --self-test             # 31 synthetic-data tests; prints PASS/FAIL per test, nonzero exit on failure
