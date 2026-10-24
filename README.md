@@ -139,7 +139,13 @@ Safari keeps its cookies in a protected location. macOS only lets an app read th
 <details>
 <summary><b>Why does macOS ask about "Claude Safe Storage"?</b></summary>
 
-Claude Desktop encrypts its cookies with a key stored in your Keychain under that name. The helper needs it to write your session in Desktop's format. Choose **Allow**. macOS may ask twice, with slightly different wording; choose **Allow** both times. If macOS asks for a password, it's your Mac login password, typed into macOS's own dialog. The helper has no password field.
+Claude Desktop encrypts its cookies with a key stored in your Keychain under that name. The helper needs it to write your session in Desktop's format.
+
+macOS usually asks **twice**, with slightly different wording: first that the helper "wants to use your confidential information stored in 'Claude Safe Storage'," then that it "wants to access key 'Claude Safe Storage'." The helper reads the key only once. The two prompts come from two separate Keychain checks: the key belongs to Claude Desktop, and only Claude Desktop, signed by Anthropic, may read it without asking. The helper passes neither check, so macOS asks about each one. Choose **Allow** both times.
+
+If you choose **Always Allow** on the first prompt, macOS skips the second one. But that permission stays: this build of the helper could read the key again later without asking. If you're not sure, choose **Allow**.
+
+If macOS asks for a password, it's your Mac login password, typed into macOS's own dialog. The helper has no password field.
 
 </details>
 
@@ -184,7 +190,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for the project layout, the preview rende
 
 ## Project status
 
-This is a **preview** (0.3.0). The transfer method has worked on a real Intel Mac, and the native app's import and restore engine is covered by 32 self-tests that use synthetic data. The universal build includes Apple silicon, but that hasn't been independently tested yet, and neither has the native app's interactive Keychain prompt. Reports are very welcome. See [CHANGELOG.md](CHANGELOG.md) for what's new.
+This is a **preview** (0.3.0). The transfer method has worked on a real Intel Mac, and the native app's import and restore engine is covered by 32 self-tests that use synthetic data. The universal build has also been tested on an Apple silicon Mac (M4 Pro, macOS 27), including a real import through the native app and its Keychain prompts. Reports from other Macs are very welcome. See [CHANGELOG.md](CHANGELOG.md) for what's new.
 
 ## Contributing
 

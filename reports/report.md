@@ -120,7 +120,14 @@ Then **Backups → Restore…** was refused with "Desktop has a newer sign-in". 
 
 **Keychain prompts**
 
-macOS asked twice per import, with the two different wordings shown in run 3, steps 6 and 7. The code reads the key once (`CookieCrypto.keyFromKeychain`, a single `SecItemCopyMatching` call), so both prompts come from macOS. This is plausibly one prompt for the item's access list and one for its partition list, since the source build is ad hoc signed with no team ID; that's unconfirmed. The help text and README describe a single prompt, so mentioning that two can appear would avoid confusion.
+macOS asked twice per import, with the two different wordings shown in run 3, steps 6 and 7. The code reads the key once (`CookieCrypto.keyFromKeychain`, a single `SecItemCopyMatching` call), so both prompts come from macOS.
+
+A read-only `security dump-keychain -a` of the item (no secrets) shows why. Its access list allows `decrypt` only for `/Applications/Claude.app` with Anthropic's designated requirement. Its partition list is only `teamid:Q6L2SF6YDW`. The helper is ad hoc signed, so it fails both checks, and macOS prompts once for each. The same thing happens elsewhere:
+
+- [Mozilla bug 1582486](https://bugzilla.mozilla.org/show_bug.cgi?id=1582486): Firefox reading "Chrome Safe Storage" with one `SecItemCopyMatching` call gets two prompts. Keychain Access itself also prompts twice for that item. The bug is still open.
+- [Apple Developer Forums thread 747190](https://developer.apple.com/forums/thread/747190): the same two wordings. The poster reports that choosing **Always Allow** on the first prompt skips the second. Apple gave no explanation there, and that hasn't been tried in this report.
+
+No code change reduces this to one prompt. Signing with a Developer ID gives a different team ID, so it still fails the partition check. `/usr/bin/security` is in neither list, so shelling out to it doesn't help either. The README and Help now explain the two prompts and the **Always Allow** trade-off.
 
 **Full Disk Access**
 

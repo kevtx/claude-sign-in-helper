@@ -64,7 +64,7 @@
 "If macOS blocks access" = "If macOS blocks access";
 "Allow this app in Privacy & Security → Full Disk Access, then reopen it. Only do this if you trust it." = "Allow this app in Privacy & Security → Full Disk Access, then reopen it. Only do this if you trust it.";
 "The Keychain prompt" = "The Keychain prompt";
-"If macOS asks about “Claude Safe Storage,” choose Allow. It may ask twice. Type your password only in that dialog." = "If macOS asks about “Claude Safe Storage,” choose Allow. It may ask twice. Type your password only in that dialog.";
+"macOS asks twice about “Claude Safe Storage,” Claude Desktop’s key. Choose Allow both times (Always Allow asks once, but is permanent)." = "macOS asks twice about “Claude Safe Storage,” Claude Desktop’s key. Choose Allow both times (Always Allow asks once, but is permanent).";
 "Privacy" = "Privacy";
 "Runs only on this Mac, with no network requests. Reads only Claude’s sign-in cookies; Safari isn’t changed." = "Runs only on this Mac, with no network requests. Reads only Claude’s sign-in cookies; Safari isn’t changed.";
 "Limits" = "Limits";

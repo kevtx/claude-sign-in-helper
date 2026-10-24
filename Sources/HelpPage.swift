@@ -41,7 +41,7 @@ struct HelpSheet: View {
                     VStack(alignment: .leading, spacing: 6) { accessButtons }
                 }
             }
-            item("The Keychain prompt", "If macOS asks about “Claude Safe Storage,” choose Allow. It may ask twice. Type your password only in that dialog.")
+            item("The Keychain prompt", "macOS asks twice about “Claude Safe Storage,” Claude Desktop’s key. Choose Allow both times (Always Allow asks once, but is permanent).")
             item("Privacy", "Runs only on this Mac, with no network requests. Reads only Claude’s sign-in cookies; Safari isn’t changed.")
             item("Limits", "Independent utility. Safari’s default profile and one Claude session only.")
         }

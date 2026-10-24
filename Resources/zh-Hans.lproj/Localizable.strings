@@ -64,7 +64,7 @@
 "If macOS blocks access" = "如果 macOS 阻止访问";
 "Allow this app in Privacy & Security → Full Disk Access, then reopen it. Only do this if you trust it." = "在“隐私与安全性”→“完全磁盘访问权限”中允许此 App，然后重新打开它。请仅在信任此 App 时这样做。";
 "The Keychain prompt" = "钥匙串提示";
-"If macOS asks about “Claude Safe Storage,” choose Allow. It may ask twice. Type your password only in that dialog." = "如果 macOS 询问“Claude Safe Storage”，请选择“允许”。可能会询问两次。只在该对话框中输入密码。";
+"macOS asks twice about “Claude Safe Storage,” Claude Desktop’s key. Choose Allow both times (Always Allow asks once, but is permanent)." = "macOS 会就 Claude Desktop 的密钥“Claude Safe Storage”询问两次。请两次都选择“允许”（“始终允许”只需一次，但许可会永久保留）。";
 "Privacy" = "隐私";
 "Runs only on this Mac, with no network requests. Reads only Claude’s sign-in cookies; Safari isn’t changed." = "仅在这台 Mac 上运行，不发出任何网络请求。只读取 Claude 的登录 Cookie，不会更改 Safari。";
 "Limits" = "限制";
